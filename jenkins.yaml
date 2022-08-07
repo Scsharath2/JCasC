@@ -150,6 +150,7 @@ jenkins:
         - favoriting:
             autofavoriteEnabled: true
         - "favorite"
+        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -162,6 +163,7 @@ jenkins:
         - favoriting:
             autofavoriteEnabled: true
         - "favorite"
+        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -174,6 +176,7 @@ jenkins:
         - favoriting:
             autofavoriteEnabled: true
         - "favorite"
+        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -186,6 +189,7 @@ jenkins:
         - favoriting:
             autofavoriteEnabled: true
         - "favorite"
+        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -198,6 +202,7 @@ jenkins:
         - favoriting:
             autofavoriteEnabled: true
         - "favorite"
+        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -210,6 +215,7 @@ jenkins:
         - favoriting:
             autofavoriteEnabled: true
         - "favorite"
+        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -234,6 +240,7 @@ jenkins:
         - favoriting:
             autofavoriteEnabled: true
         - "favorite"
+        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -241,16 +248,6 @@ jenkins:
             emailAddress: "Ryan@gmail.com"
       - id: "sharath"
         name: "sharath"
-        properties:
-        - "apiToken"
-        - favoriting:
-            autofavoriteEnabled: true
-        - "mailer"
-        - "favorite"
-        - preferredProvider:
-            providerId: "default"
-      - id: "chandra"
-        name: "chandra"
         properties:
         - "apiToken"
         - favoriting:
