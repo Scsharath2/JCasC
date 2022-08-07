@@ -150,7 +150,6 @@ jenkins:
         - favoriting:
             autofavoriteEnabled: true
         - "favorite"
-        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -163,7 +162,6 @@ jenkins:
         - favoriting:
             autofavoriteEnabled: true
         - "favorite"
-        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -176,7 +174,6 @@ jenkins:
         - favoriting:
             autofavoriteEnabled: true
         - "favorite"
-        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -189,7 +186,6 @@ jenkins:
         - favoriting:
             autofavoriteEnabled: true
         - "favorite"
-        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -202,7 +198,6 @@ jenkins:
         - favoriting:
             autofavoriteEnabled: true
         - "favorite"
-        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -215,7 +210,6 @@ jenkins:
         - favoriting:
             autofavoriteEnabled: true
         - "favorite"
-        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -240,7 +234,6 @@ jenkins:
         - favoriting:
             autofavoriteEnabled: true
         - "favorite"
-        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
