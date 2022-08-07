@@ -1,0 +1,414 @@
+credentials:
+  system:
+    domainCredentials:
+    - credentials:
+      - usernamePassword:
+          id: "3b89ff73-c86d-465a-aff5-bf8fccc118d2"
+          password: "{AQAAABAAAAAQvvjb3y1zPZlVKm/rM7Dg+nzh3kT2vlX6zrruv1cUKmE=}"
+          scope: GLOBAL
+          username: "ntnet\\sgajjela"
+      - usernamePassword:
+          id: "Sharath"
+          password: "{AQAAABAAAAAQSLiwtP+1UlcUXrySgA4ZgqNfuLRsmfo2a1WW+atYyCw=}"
+          scope: GLOBAL
+          username: "sharath"
+      - usernamePassword:
+          id: "69dc1770-d142-4206-aeb1-cce074948649"
+          password: "{AQAAABAAAAAw3JeMXbBzErIV3mQYeYxKkydu6+yV9sOV36gqclSy9Vegy6yNdFejrMGaBwz19750n/SjloIpDvvYGIbaubvkFQ==}"
+          scope: GLOBAL
+          username: "sharath"
+      - usernamePassword:
+          id: "d5e989c8-0888-4fb2-bc3b-4aa7a447d420"
+          password: "{AQAAABAAAAAwlZ7KrpXfOIkZ63aI7X2RDPoj/zv/HptVBfCUgNKYN9zPUjM5h50pXC9ULar6EHh9/wazq3GCqhNmmh6lbcHjkA==}"
+          scope: GLOBAL
+          username: "Maven"
+      - usernamePassword:
+          description: "User for GIT Integration"
+          id: "b77ae6ab-db10-4990-a4bb-4985ad264518"
+          password: "{AQAAABAAAAAw8bU0THMlft8+UHkTb+Tt3ljymEAwNiY1Wu43jn59cZxIduxhani+PiGWCI9jDXWZuc76fxvsQJ7WkFTOnem7ug==}"
+          scope: GLOBAL
+          username: "Scsharath2"
+      - usernamePassword:
+          description: "tomcat credentials"
+          id: "0fec68c6-c91d-4583-b0e8-0543bce3f690"
+          password: "{AQAAABAAAAAQ5WKVOiwWhtmt0JPrqvyFz//WIxz++fT6O3Iyxj6Oyyk=}"
+          scope: GLOBAL
+          username: "tomcat"
+      - string:
+          description: "Token for Sonar Qube"
+          id: "a563f287-84d6-402f-9a11-5d3890a66525"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAAwdCe+bnCmEuzVNIV8jaAtRlZRcwuuW9WvyBTL8/Iq4oQ9/fzr6WNmura+GEBpQwaSBmix0HLBaJRM9XAoTNuSxg==}"
+      - usernamePassword:
+          description: "Credentials for Nexus"
+          id: "2c3a0151-5612-45be-b511-40915a325ee1"
+          password: "{AQAAABAAAAAQw7R3dxJah324YuWwhzGg4CPZivhn/uNFeRzoI3yboMA=}"
+          scope: GLOBAL
+          username: "admin"
+jenkins:
+  agentProtocols:
+  - "JNLP4-connect"
+  - "Ping"
+  authorizationStrategy:
+    roleBased:
+      roles:
+        global:
+        - assignments:
+          - "Pam"
+          name: "Dev"
+          pattern: ".*"
+          permissions:
+          - "Overall/Read"
+          - "Job/Discover"
+          - "Job/Read"
+          - "Job/Workspace"
+        - assignments:
+          - "Angela"
+          - "Dwight"
+          name: "DevOps"
+          pattern: ".*"
+          permissions:
+          - "Overall/Read"
+          - "Job/Discover"
+          - "Job/Read"
+          - "Job/Workspace"
+        - assignments:
+          - "Kevin"
+          - "Ryan"
+          - "Jim"
+          name: "QA"
+          pattern: ".*"
+          permissions:
+          - "Overall/Read"
+          - "Job/Discover"
+          - "Job/Read"
+          - "Job/Workspace"
+        - assignments:
+          - "Michal"
+          - "admin"
+          name: "admin"
+          pattern: ".*"
+          permissions:
+          - "Overall/Administer"
+        items:
+        - assignments:
+          - "Michal"
+          - "Pam"
+          name: "Dev"
+          pattern: "DevOps.*"
+          permissions:
+          - "Job/Cancel"
+          - "Job/Build"
+          - "Job/Delete"
+          - "Job/Discover"
+          - "Job/Read"
+          - "Job/Configure"
+          - "Job/Workspace"
+        - assignments:
+          - "Dwight"
+          name: "DevOps"
+          pattern: "DevOps.*"
+          permissions:
+          - "Job/Cancel"
+          - "Job/Build"
+          - "Job/Delete"
+          - "Job/Discover"
+          - "Job/Read"
+          - "Job/Configure"
+          - "Job/Workspace"
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  disabledAdministrativeMonitors:
+  - "jenkins.monitor.JavaVersionRecommendationAdminMonitor"
+  - "jenkins.diagnostics.ControllerExecutorsNoAgents"
+  - "hudson.diagnosis.ReverseProxySetupMonitor"
+  labelAtoms:
+  - name: "built-in"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  numExecutors: 2
+  primaryView:
+    all:
+      name: "all"
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: true
+  scmCheckoutRetryCount: 0
+  securityRealm:
+    local:
+      allowsSignup: true
+      enableCaptcha: false
+      users:
+      - id: "admin"
+        name: "admin"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "sharathchandra.gajjela@amdocs.com"
+      - id: "angela"
+        name: "Angela"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "Angela@gmail.com"
+      - id: "dwight"
+        name: "Dwight Schrute "
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "dwight@gmail.com"
+      - id: "jim"
+        name: "Jim"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "Jim@gmail.com"
+      - id: "kevin"
+        name: "Kevin"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "Kevin@gmail.com"
+      - id: "michal"
+        name: "Michal-Worlds' Best Boss"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "Michal@gmail.com"
+      - description: "Devloper "
+        id: "pam"
+        name: "Pam Beesly"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - mailer:
+            emailAddress: "Pam@gmail.com"
+        - "favorite"
+        - preferredProvider:
+            providerId: "default"
+      - id: "ryan"
+        name: "Ryan"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "Ryan@gmail.com"
+      - id: "sharath"
+        name: "sharath"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "mailer"
+        - "favorite"
+        - preferredProvider:
+            providerId: "default"
+      - id: "chandra"
+        name: "chandra"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "mailer"
+        - "favorite"
+        - preferredProvider:
+            providerId: "default"
+  slaveAgentPort: -1
+  updateCenter:
+    sites:
+    - id: "default"
+      url: "https://updates.jenkins.io/update-center.json"
+  views:
+  - all:
+      name: "all"
+  viewsTabBar: "standard"
+globalCredentialsConfiguration:
+  configuration:
+    providerFilter: "none"
+    typeFilter: "none"
+security:
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  sSHD:
+    port: -1
+unclassified:
+  bitbucketEndpointConfiguration:
+    endpoints:
+    - bitbucketCloudEndpoint:
+        enableCache: false
+        manageHooks: false
+        repositoriesCacheDuration: 0
+        teamCacheDuration: 0
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  cxScanBuilder:
+    asyncHtmlRemoval: false
+    continueBuildWhenTimedOut: false
+    enableCertificateValidation: false
+    filterPattern: |-
+      !**/_cvs/**/*, !**/.svn/**/*, !**/.hg/**/*, !**/.git/**/*, !**/.bzr/**/*,
+              !**/.gitgnore/**/*, !**/.gradle/**/*, !**/.checkstyle/**/*, !**/.classpath/**/*, !**/bin/**/*,
+              !**/obj/**/*, !**/backup/**/*, !**/.idea/**/*, !**/*.DS_Store, !**/*.ipr, !**/*.iws,
+              !**/*.bak, !**/*.tmp, !**/*.aac, !**/*.aif, !**/*.iff, !**/*.m3u, !**/*.mid, !**/*.mp3,
+              !**/*.mpa, !**/*.ra, !**/*.wav, !**/*.wma, !**/*.3g2, !**/*.3gp, !**/*.asf, !**/*.asx,
+              !**/*.avi, !**/*.flv, !**/*.mov, !**/*.mp4, !**/*.mpg, !**/*.rm, !**/*.swf, !**/*.vob,
+              !**/*.wmv, !**/*.bmp, !**/*.gif, !**/*.jpg, !**/*.png, !**/*.psd, !**/*.tif, !**/*.swf,
+              !**/*.jar, !**/*.zip, !**/*.rar, !**/*.exe, !**/*.dll, !**/*.pdb, !**/*.7z, !**/*.gz,
+              !**/*.tar.gz, !**/*.tar, !**/*.gz, !**/*.ahtm, !**/*.ahtml, !**/*.fhtml, !**/*.hdm,
+              !**/*.hdml, !**/*.hsql, !**/*.ht, !**/*.hta, !**/*.htc, !**/*.htd, !**/*.war, !**/*.ear,
+              !**/*.htmls, !**/*.ihtml, !**/*.mht, !**/*.mhtm, !**/*.mhtml, !**/*.ssi, !**/*.stm,
+              !**/*.bin,!**/*.lock,!**/*.svg,!**/*.obj,
+              !**/*.stml, !**/*.ttml, !**/*.txn, !**/*.xhtm, !**/*.xhtml, !**/*.class, !**/*.iml, !Checkmarx/Reports/*.*,
+              !OSADependencies.json, !**/node_modules/**/*
+    forcingVulnerabilityThresholdEnabled: false
+    globallyDefineScanSettings: false
+    hideDebugLogs: false
+    hideResults: false
+    isProxy: true
+    jobGlobalStatusOnError: FAILURE
+    jobGlobalStatusOnThresholdViolation: FAILURE
+    lockVulnerabilitySettings: true
+    password: "{AQAAABAAAAAQajSrRtfcHjpjX4vcTlVPEnFf7xBZ2QHNZBBDFzjuofU=}"
+    prohibitProjectCreation: false
+    scanTimeOutEnabled: false
+    scanTimeoutDuration: 1
+  email-ext:
+    adminRequiredForTemplateTesting: false
+    allowUnregisteredEnabled: false
+    charset: "UTF-8"
+    debugMode: false
+    defaultBody: |-
+      $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
+
+      Check console output at $BUILD_URL to view the results.
+    defaultContentType: "text/plain"
+    defaultSubject: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!"
+    defaultTriggerIds:
+    - "hudson.plugins.emailext.plugins.trigger.FailureTrigger"
+    maxAttachmentSize: -1
+    maxAttachmentSizeMb: -1
+    precedenceBulk: false
+    watchingEnabled: false
+  fingerprints:
+    fingerprintCleanupDisabled: false
+    storage: "file"
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "http://jenkins/github-webhook/"
+  gitSCM:
+    addGitTagAction: false
+    allowSecondFetch: false
+    createAccountBasedOnEmail: false
+    disableGitToolChooser: false
+    hideCredentials: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  globalLibraries:
+    libraries:
+    - defaultVersion: "main"
+      name: "shared-library"
+      retriever:
+        modernSCM:
+          scm:
+            git:
+              id: "7f8dd686-fe95-4b22-ab54-c1fad1aa8128"
+              remote: "https://github.com/Scsharath2/jenkins-Shared-libraries.git"
+              traits:
+              - "gitBranchDiscovery"
+  junitTestResultStorage:
+    storage: "file"
+  location:
+    adminAddress: "SGAJJELA@amdocs.com"
+    url: "http://jenkins/"
+  mailer:
+    charset: "UTF-8"
+    useSsl: false
+    useTls: false
+  mavenModuleSet:
+    localRepository: "default"
+  pollSCM:
+    pollingThreadCount: 10
+  sonarGlobalConfiguration:
+    buildWrapperEnabled: true
+    installations:
+    - credentialsId: "a563f287-84d6-402f-9a11-5d3890a66525"
+      name: "Sonar"
+      serverUrl: "http://localhost:9000"
+      triggers:
+        skipScmCause: false
+        skipUpstreamCause: false
+  whitelist:
+    enabled: false
+tool:
+  git:
+    installations:
+    - home: "git.exe"
+      name: "Default"
+  jdk:
+    installations:
+    - home: "C:\\Program Files\\Java\\jdk-11.0.14"
+      name: "JDK 11.0"
+  maven:
+    installations:
+    - home: "C:\\opt\\apache-maven-3.8.5-bin\\apache-maven-3.8.5"
+      name: "Maven 3.6"
+  mavenGlobalConfig:
+    globalSettingsProvider: "standard"
+    settingsProvider: "standard"
