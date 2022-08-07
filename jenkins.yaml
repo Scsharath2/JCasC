@@ -53,9 +53,21 @@ jenkins:
     roleBased:
       roles:
         global:
-        - assignments:
-          - "Pam"
-          name: "Dev"
+        - name: "Dev"
+          pattern: ".*"
+          permissions:
+          - "Overall/Read"
+          - "Job/Discover"
+          - "Job/Read"
+          - "Job/Workspace"
+        - name: "DevOps"
+          pattern: ".*"
+          permissions:
+          - "Overall/Read"
+          - "Job/Discover"
+          - "Job/Read"
+          - "Job/Workspace"
+        - name: "QA"
           pattern: ".*"
           permissions:
           - "Overall/Read"
@@ -63,38 +75,13 @@ jenkins:
           - "Job/Read"
           - "Job/Workspace"
         - assignments:
-          - "Angela"
-          - "Dwight"
-          name: "DevOps"
-          pattern: ".*"
-          permissions:
-          - "Overall/Read"
-          - "Job/Discover"
-          - "Job/Read"
-          - "Job/Workspace"
-        - assignments:
-          - "Kevin"
-          - "Ryan"
-          - "Jim"
-          name: "QA"
-          pattern: ".*"
-          permissions:
-          - "Overall/Read"
-          - "Job/Discover"
-          - "Job/Read"
-          - "Job/Workspace"
-        - assignments:
-          - "Michal"
           - "admin"
           name: "admin"
           pattern: ".*"
           permissions:
           - "Overall/Administer"
         items:
-        - assignments:
-          - "Michal"
-          - "Pam"
-          name: "Dev"
+        - name: "Dev"
           pattern: "DevOps.*"
           permissions:
           - "Job/Cancel"
@@ -104,9 +91,7 @@ jenkins:
           - "Job/Read"
           - "Job/Configure"
           - "Job/Workspace"
-        - assignments:
-          - "Dwight"
-          name: "DevOps"
+        - name: "DevOps"
           pattern: "DevOps.*"
           permissions:
           - "Job/Cancel"
