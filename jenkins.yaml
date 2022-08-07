@@ -132,7 +132,13 @@ jenkins:
         name: "admin"
         properties:
         - mailer:
-            emailAddress: "sharathchandra.gajjela@amdocs.com"
+            emailAddress: "scsharath@abc.com"
+      - id: "sharath"
+        name: "sharath"
+        password: "123"
+        properties:
+        - mailer:
+            emailAddress: "scsharath@abc.com"
   slaveAgentPort: -1
   updateCenter:
     sites:
