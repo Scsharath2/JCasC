@@ -146,10 +146,6 @@ jenkins:
       - id: "admin"
         name: "admin"
         properties:
-        - "apiToken"
-        - preferredProvider:
-            providerId: "default"
-        - "timezone"
         - mailer:
             emailAddress: "sharathchandra.gajjela@amdocs.com"
   slaveAgentPort: -1
