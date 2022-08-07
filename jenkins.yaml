@@ -147,10 +147,6 @@ jenkins:
         name: "admin"
         properties:
         - "apiToken"
-        - favoriting:
-            autofavoriteEnabled: true
-        - "favorite"
-        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -160,10 +156,6 @@ jenkins:
         name: "Angela"
         properties:
         - "apiToken"
-        - favoriting:
-            autofavoriteEnabled: true
-        - "favorite"
-        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -173,10 +165,6 @@ jenkins:
         name: "Dwight Schrute "
         properties:
         - "apiToken"
-        - favoriting:
-            autofavoriteEnabled: true
-        - "favorite"
-        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -186,10 +174,6 @@ jenkins:
         name: "Jim"
         properties:
         - "apiToken"
-        - favoriting:
-            autofavoriteEnabled: true
-        - "favorite"
-        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -199,10 +183,6 @@ jenkins:
         name: "Kevin"
         properties:
         - "apiToken"
-        - favoriting:
-            autofavoriteEnabled: true
-        - "favorite"
-        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -212,10 +192,6 @@ jenkins:
         name: "Michal-Worlds' Best Boss"
         properties:
         - "apiToken"
-        - favoriting:
-            autofavoriteEnabled: true
-        - "favorite"
-        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -226,21 +202,14 @@ jenkins:
         name: "Pam Beesly"
         properties:
         - "apiToken"
-        - favoriting:
-            autofavoriteEnabled: true
         - mailer:
             emailAddress: "Pam@gmail.com"
-        - "favorite"
         - preferredProvider:
             providerId: "default"
       - id: "ryan"
         name: "Ryan"
         properties:
         - "apiToken"
-        - favoriting:
-            autofavoriteEnabled: true
-        - "favorite"
-        - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
@@ -250,10 +219,6 @@ jenkins:
         name: "sharath"
         properties:
         - "apiToken"
-        - favoriting:
-            autofavoriteEnabled: true
-        - "mailer"
-        - "favorite"
         - preferredProvider:
             providerId: "default"
   slaveAgentPort: -1
